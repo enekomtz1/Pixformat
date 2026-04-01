@@ -38,9 +38,11 @@
 
 ## Tech Stack
 
-**HTML5** with semantic markup, structured data via JSON-LD, Open Graph and Twitter Card meta tags.
-**CSS3** with custom properties, Grid, Flexbox, responsive design, mobile-first breakpoints.
-**Vanilla JavaScript, ES2019+** with Web Workers, OffscreenCanvas, async/await, Canvas API, Blob API, drag-and-drop File API.
+| Technology | Details |
+|------------|---------|
+| **HTML5** | Semantic markup, structured data via JSON-LD, Open Graph and Twitter Card meta tags |
+| **CSS3** | Custom properties, Grid, Flexbox, responsive design, mobile-first breakpoints |
+| **Vanilla JS, ES2019+** | Web Workers, OffscreenCanvas, async/await, Canvas API, Blob API, drag-and-drop File API |
 
 ---
 
@@ -51,13 +53,19 @@ No build step required. Pixformat is a static single-page application.
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/Pixformat.git
+git clone https://github.com/enekomtz1/Pixformat.git
 cd Pixformat
 ```
 
-### Serve locally
+### Run it
 
-A local HTTP server is required for Web Workers and CORS to work correctly.
+Open `index.html` directly in your browser (double-click the file). All conversions run locally — no server needed.
+
+> **Note:** ZIP batch downloads require an internet connection because JSZip is lazy-loaded from a CDN. All other features work fully offline.
+
+### For development (optional)
+
+If you prefer a local HTTP server:
 
 ```bash
 # Python
@@ -67,27 +75,23 @@ python -m http.server 8000
 npx serve
 ```
 
-Then open `http://localhost:8000` in your browser.
-
 ### Browser requirements
 
-Modern browser with HTML5 Canvas support. Web Workers and OffscreenCanvas are optional, the app falls back to main-thread processing when unavailable.
+Modern browser with HTML5 Canvas support. Web Workers and OffscreenCanvas are optional — the app falls back to main-thread processing when unavailable.
 
 ---
 
 ## Project Structure
 
-```
-Pixformat/
-  index.html          Main HTML file, single-page app entry point
-  app.js              Application logic, worker pool, conversion engine
-  styles.css          Full styling, responsive layout, animations
-  robots.txt          SEO crawl directives
-  sitemap.xml         Sitemap for pixformat.com
-  public/
-    PixFormatLogo.webp    Logo in WebP format
-    pixformat-icon.svg    App icon in SVG format
-```
+| File | Description |
+|------|-------------|
+| `index.html` | Main HTML file, single-page app entry point |
+| `app.js` | Application logic, worker pool, conversion engine |
+| `styles.css` | Full styling, responsive layout, animations |
+| `robots.txt` | SEO crawl directives |
+| `sitemap.xml` | Sitemap for pixformat.com |
+| `public/PixFormatLogo.webp` | Logo in WebP format |
+| `public/pixformat-icon.svg` | App icon in SVG format |
 
 ---
 
