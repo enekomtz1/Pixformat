@@ -1,0 +1,11 @@
+# robots.txt for pixformat.com
+# Single-page application — one indexable URL
+
+User-agent: *
+Allow: /
+
+# Block crawling of static assets that have no SEO value
+Disallow: /public/
+
+# Sitemap location (absolute URL required by specification)
+Sitemap: https://pixformat.com/sitemap.xml
