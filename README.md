@@ -22,7 +22,7 @@
 
 **Batch processing.** Drop multiple files at once, convert them in parallel using a Web Worker pool sized to your CPU core count.
 
-**Real-time stats.** See original size, converted size, and percentage saved for every image. Color-coded badges, green for savings, orange for increases.
+**Real-time stats.** See original size, converted size, and percentage saved for every image. Color-coded badges indicate green for savings, orange for increases.
 
 **Quality tuned per codec.** WebP at 0.82 for perceptual transparency, JPEG at 0.85 for photographic fidelity, PNG lossless, AVIF at 0.65 for perceptual equivalence to WebP 0.82.
 
@@ -40,9 +40,9 @@
 
 | Technology | Details |
 |------------|---------|
-| **HTML5** | Semantic markup, structured data via JSON-LD, Open Graph and Twitter Card meta tags |
-| **CSS3** | Custom properties, Grid, Flexbox, responsive design, mobile-first breakpoints |
-| **Vanilla JS, ES2019+** | Web Workers, OffscreenCanvas, async/await, Canvas API, Blob API, drag-and-drop File API |
+| **HTML5** | Semantic markup, structured data via JSON-LD, Open Graph and Twitter Card meta tags. |
+| **CSS3** | Custom properties, Grid, Flexbox, responsive design, and mobile-first breakpoints. |
+| **Vanilla JS, ES2019+** | Web Workers, OffscreenCanvas, async/await, Canvas API, Blob API, and drag-and-drop File API. |
 
 ---
 
@@ -59,11 +59,11 @@ cd Pixformat
 
 ### Run it
 
-Open `index.html` directly in your browser (double-click the file). All conversions run locally — no server needed.
+Open `index.html` directly in your browser by double-clicking the file. All conversions run locally, no server needed.
 
 > **Note:** ZIP batch downloads require an internet connection because JSZip is lazy-loaded from a CDN. All other features work fully offline.
 
-### For development (optional)
+### For development, optional
 
 If you prefer a local HTTP server:
 
@@ -77,7 +77,7 @@ npx serve
 
 ### Browser requirements
 
-Modern browser with HTML5 Canvas support. Web Workers and OffscreenCanvas are optional — the app falls back to main-thread processing when unavailable.
+Modern browser with HTML5 Canvas support. Web Workers and OffscreenCanvas are optional. The app falls back to main-thread processing when unavailable.
 
 ---
 
@@ -85,9 +85,9 @@ Modern browser with HTML5 Canvas support. Web Workers and OffscreenCanvas are op
 
 | File | Description |
 |------|-------------|
-| `index.html` | Main HTML file, single-page app entry point |
-| `app.js` | Application logic, worker pool, conversion engine |
-| `styles.css` | Full styling, responsive layout, animations |
+| `index.html` | Main HTML file and single-page app entry point |
+| `app.js` | Application logic, worker pool, and conversion engine |
+| `styles.css` | Full styling, responsive layout, and animations |
 | `robots.txt` | SEO crawl directives |
 | `sitemap.xml` | Sitemap for pixformat.com |
 | `public/PixFormatLogo.webp` | Logo in WebP format |
@@ -97,11 +97,11 @@ Modern browser with HTML5 Canvas support. Web Workers and OffscreenCanvas are op
 
 ## How It Works
 
-1. User drops or selects image files through the drag-and-drop zone or file picker.
+1. The user drops or selects image files through the drag-and-drop zone or file picker.
 2. A pool of Web Workers, sized to `navigator.hardwareConcurrency`, processes conversions in parallel using OffscreenCanvas.
 3. Each image is decoded with `createImageBitmap`, drawn to canvas, then encoded to the selected output format via `canvas.toBlob`.
 4. Thumbnails, size stats, and status indicators update in real time as each conversion completes.
-5. ZIP downloads are assembled client-side with JSZip, lazy-loaded only when needed.
+5. ZIP downloads are assembled client-side with JSZip. The library is lazy-loaded only when needed.
 
 ---
 
